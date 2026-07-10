@@ -36,6 +36,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## API Endpoints
 
+The base URL for the APIs is: `https://chat-backend-enexabit.vercel.app`
+
 ### Auth
 
 *   **POST** `/auth/signup`
