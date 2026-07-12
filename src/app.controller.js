@@ -6,7 +6,7 @@ import userRouter from "./module/users/users.controller.js";
 import messageRouter from "./module/messages/message.controller.js";
 import cors from "cors";
 
-export const bootstrap = () => {
+export const bootstrap = async () => {
   const app = express();
 
   app.use(express.json());
@@ -17,7 +17,7 @@ export const bootstrap = () => {
     }),
   );
 
-  databaseConnection();
+  await databaseConnection();
 
   app.use("/auth", authRouter);
   app.use("/users", userRouter);
