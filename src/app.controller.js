@@ -48,6 +48,9 @@ export const bootstrap = async () => {
     });
 
     socket.on("sendMessage", ({ roomId, message, senderId }) => {
+      console.log(`message sent from the server and the roomId:${roomId}`);
+      console.log(`message:${message}`);
+      console.log(`senderId:${senderId}`);
       io.to(roomId).emit("receiveMessage", {
         roomId,
         message,
